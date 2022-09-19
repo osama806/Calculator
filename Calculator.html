@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="../CSS/Calculator.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h2>Welcome to calculator</h2>
+            <form id="myForm" autocomplete="off">
+                <fieldset>
+                    <legend>calculator</legend>
+                    <label>Enter the first number: <input id="first_number" type="number" placeholder="The first number" required/></label>
+                    <label>Enter the second number: <input id="second_number" type="number" placeholder="The second number" required/></label>
+                    <label>
+                        Enter the operation code:
+                        <select id="operation" onchange="change()">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">x</option>
+                            <option value="/">÷</option>
+                        </select>
+                    </label>
+                    <div>
+                        <label id="inline">The resulte: </label>
+                        <p id="resulte"></p>
+                    </div>
+                    <input id="submit" type="submit" value="Calculate" onclick="calculator()" />
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <script>
+        var first = document.getElementById('first_number');
+        var second = document.getElementById('second_number');
+        var op = document.getElementById('operation');
+        var res = document.getElementById('resulte');
+        var form = document.getElementById('myForm');
+        
+        function calculator() {
+            switch (op.value) {
+                case '+':
+                    res.innerText = eval(parseFloat(first.value) + parseFloat(second.value));
+                    break;
+                case '-':
+                    res.innerText = first.value - second.value;
+                    break;
+                case '*':
+                    res.innerText = first.value * second.value;
+                    break;
+                case '/':
+                    res.innerText = first.value / second.value;
+                    break;
+            }
+        }
+        function change() {
+                calculator();
+        }
+
+        function handleForm(event) {
+            event.preventDefault();
+        }
+        form.addEventListener('click', handleForm);
+    </script>
+</body>
+</html>

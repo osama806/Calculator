@@ -1,0 +1,72 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    background: linear-gradient(to right, #185a9d, #43cea2); 
+    color: white;
+}
+.section .container h2{
+    text-align:center;
+    margin:35px auto;
+}
+.section .container form {
+    width:320px;
+    margin:0 auto;
+}
+.section .container form > fieldset {
+    border: dashed 3px lightblue;
+}
+.section .container form > fieldset > legend {
+    padding:0 5px;
+    color:black;
+}
+.section .container form > fieldset > label {
+    display: block;
+    font-size: 13px;
+    margin:25px auto;
+    padding:0px 10px;
+    color:darkblue;
+}
+.section .container form fieldset label input {
+    background: none;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-color: black;
+    color:white;
+    outline:none;
+}
+.section .container form fieldset label select {
+    background: none;
+    width: 153px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-color: black;
+    text-align:center;
+    outline: none;
+}
+.section .container form fieldset label input#first_number {
+    margin-left: 16px;
+}
+.section .container form fieldset input#submit{
+    width:100px;
+    padding:2px;
+    margin:0 0 10px 100px;
+}
+.section .container form fieldset div{
+    padding:0px 10px 20px;
+}
+.section .container form fieldset div label#inline {
+    display: inline;
+    font-size: 13px;
+    margin: 25px auto;
+    color: darkblue;
+}
+.section .container form fieldset div p{
+    display:inline;
+    margin-left:73px;
+    color:black;
+}
